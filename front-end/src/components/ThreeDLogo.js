@@ -39,7 +39,7 @@ export default class ThreeDLogo extends React.Component {
     const scaleSize = this.props.scale
 
     gltfLoader.load(
-      "https://raw.githubusercontent.com/omarmhmmd/marcaz/main/src/models/marcaz_v5.gltf",
+      "https://raw.githubusercontent.com/omarmhmmd/marcaz/main/front-end/src/models/marcaz_v5.gltf",
       gltf => {
         logo = gltf.scene
         logo.scale.set(scaleSize, scaleSize, scaleSize)

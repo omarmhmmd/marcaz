@@ -85,12 +85,11 @@ export const query = graphql`
 /**
  * HTML
  */
-const Index = ({ data }) => {
+const Index = ({data}) => {
+	//props.data
   const essays = data.essays.nodes
-  console.log(essays)
 
-  const essayBody = data.essayBody.nodes
-  console.log(essayBody)
+  // const essayBody = data.essayBody.nodes
 
   const Desktop = ({ children }) => {
     const isDesktop = useMediaQuery({ minWidth: 768 })

@@ -12,8 +12,8 @@ const BlockContent = require("@sanity/block-content-to-react")
  * GRAPHQL
  */
 export const query = graphql`
-  query MyQuery {
-		essays: allSanityEssay(sort: { fields: publishedAt, order: DESC }) {
+  query($slug: String!) {
+		essays: allSanityEssay(filter: { slug: { current: { eq: $slug } } }) {
       nodes {
         author {
           name
@@ -44,7 +44,7 @@ export const query = graphql`
         description
       }
     },
-    essayBody: allSanityEssay {
+    essayBody: allSanityEssay(filter: { slug: { current: { eq: $slug } } }) {
       nodes {
         _rawBody(resolveReferences: { maxDepth: 1 })
       }
@@ -55,7 +55,9 @@ export const query = graphql`
 /**
  * JS
  */
-const Index = ({ data }) => {
+const EssayTemplate = (props) => {
+	console.log(props);
+	const data = props.data
 	const essays = data.essays.nodes[0]
   const essayBody = data.essayBody.nodes[0]._rawBody
 
@@ -218,4 +220,4 @@ const SocialLinks = styled.div`
 	}
 `
 
-export default Index
+export default EssayTemplate
