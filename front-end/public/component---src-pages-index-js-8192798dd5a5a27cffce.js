@@ -1,0 +1,2 @@
+(self.webpackChunkgatsby_starter_default=self.webpackChunkgatsby_starter_default||[]).push([[678],{7704:function(t,a,e){"use strict";e.r(a);var r=e(7294),u=e(5798),n=e(3431);a.default=function(){return(0,n.tZ)(r.Fragment,null,(0,n.tZ)(u.Z,{title:"Marcaz"}))}}}]);
+//# sourceMappingURL=component---src-pages-index-js-8192798dd5a5a27cffce.js.map

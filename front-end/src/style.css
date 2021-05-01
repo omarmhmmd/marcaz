@@ -1,0 +1,70 @@
+/* Global CSS */
+
+:root {
+	/* Fonts */
+  --fontFamily-sans: Arial;
+  --fontFamily-serif: Times;
+  --font-body: var(--fontFamily-serif);
+  --font-heading: var(--fontFamily-sans);
+
+	/* Typography */
+  --lineHeight-none: 1;
+  --lineHeight-tight: 1.25;
+  --lineHeight-normal: 1.5;
+  --lineHeight-relaxed: 1.625;
+  /* 1.200 Minor Third Type Scale */
+  --fontSize-0: 0.833rem;
+  --fontSize-1: 1rem;
+  --fontSize-2: 1.2rem;
+  --fontSize-3: 1.44rem;
+  --fontSize-4: 1.728rem;
+  --fontSize-5: 2.074rem;
+  --fontSize-6: 2.488rem;
+  --fontSize-7: 2.986rem;
+
+	/* Colors */
+  --color-primary: #4A3829;
+  --color-black: #000000;
+  --color-white: #ffffff;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: none; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #4A3829; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #4A3829; 
+}
+
+html {
+	color: var(--color-primary);
+}
+
+a {
+	color: var(--color-primary);
+  text-decoration: none; /* no underline */
+}
+
+.primaryColor {
+	color: var(--color-primary);
+}
+
+.sansFont {
+	font-family: var(--fontFamily-sans);
+}
+
+
+
