@@ -10,7 +10,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 
 export default class ThreeDLogo extends React.Component {
   componentDidMount = (props) => {
-    console.log(this.props);
+    // console.log(this.props);
     /**
      * Canvas
      */

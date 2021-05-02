@@ -59,7 +59,7 @@ const Border = styled.div`
  * HTML
  */
 const Layout = props => {
-	console.log(props);
+	// console.log(props);
   const Desktop = ({ children }) => {
     const isDesktop = useMediaQuery({ minWidth: 768 })
     return isDesktop ? children : null
