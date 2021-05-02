@@ -1,12 +1,12 @@
 import * as React from "react"
-import { graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 import { useMediaQuery } from "react-responsive"
-import styled from "@emotion/styled"
+import { graphql } from "gatsby"
+import { Link } from "gatsby"
 import Layout from "../components/Layout"
 import Card from "../components/Card"
 import Button from "../components/Button"
-import { Link } from "gatsby"
+import styled from "@emotion/styled"
 
 /**
  * CSS
@@ -20,21 +20,23 @@ const Content = styled.div`
   align-items: center;
   box-sizing: border-box;
   box-shadow: inset 0px 0px 10px #4a3829;
-  background-color: white;
+  /* background-color: green; */
   overflow-y: scroll;
 `
 
 const CardList = styled.div`
-  padding-top: 37.5px;
+  /* padding-top: 37.5px; */
   /* background-color: green; */
   height: 100%;
   display: grid;
   align-items: center;
+	align-content: center;
   justify-content: center;
   grid-gap: 37.5px;
   @media (max-width: 768px) {
+		align-content: flex-start;
     overflow-y: scroll;
-    margin-top: 0px;
+    padding-top: 100px;
   }
 
   grid-template-columns: repeat(3, 17.5vw);

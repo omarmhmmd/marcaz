@@ -25,7 +25,7 @@ const Container = styled.div`
 
   .button {
     font-size: 14px;
-    /* background-color: white; */
+    background-color: white;
     display: inline-block;
     line-height: 25px;
     height: 25px;

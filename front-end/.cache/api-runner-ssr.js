@@ -1,22 +1,22 @@
 var plugins = [{
       name: 'gatsby-source-sanity',
-      plugin: require('/Users/omarmhmmd/Desktop/marcaz-app/front-end/node_modules/gatsby-source-sanity/gatsby-ssr'),
+      plugin: require('/Users/omarmhmmd/Desktop/Projects/Marcaz/marcaz-app/front-end/node_modules/gatsby-source-sanity/gatsby-ssr'),
       options: {"plugins":[],"projectId":"7wi9kuqc","dataset":"production","watchMode":true},
     },{
       name: 'gatsby-plugin-google-analytics',
-      plugin: require('/Users/omarmhmmd/Desktop/marcaz-app/front-end/node_modules/gatsby-plugin-google-analytics/gatsby-ssr'),
+      plugin: require('/Users/omarmhmmd/Desktop/Projects/Marcaz/marcaz-app/front-end/node_modules/gatsby-plugin-google-analytics/gatsby-ssr'),
       options: {"plugins":[],"trackingId":"G-LL6XW6TPLN","head":true,"anonymize":false,"respectDNT":false,"exclude":[],"pageTransitionDelay":0},
     },{
       name: 'gatsby-plugin-react-helmet',
-      plugin: require('/Users/omarmhmmd/Desktop/marcaz-app/front-end/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
+      plugin: require('/Users/omarmhmmd/Desktop/Projects/Marcaz/marcaz-app/front-end/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
       options: {"plugins":[]},
     },{
       name: 'gatsby-plugin-image',
-      plugin: require('/Users/omarmhmmd/Desktop/marcaz-app/front-end/node_modules/gatsby-plugin-image/gatsby-ssr'),
+      plugin: require('/Users/omarmhmmd/Desktop/Projects/Marcaz/marcaz-app/front-end/node_modules/gatsby-plugin-image/gatsby-ssr'),
       options: {"plugins":[]},
     },{
       name: 'gatsby-plugin-manifest',
-      plugin: require('/Users/omarmhmmd/Desktop/marcaz-app/front-end/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
+      plugin: require('/Users/omarmhmmd/Desktop/Projects/Marcaz/marcaz-app/front-end/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
       options: {"plugins":[],"name":"gatsby-starter-default","short_name":"starter","start_url":"/","background_color":"#663399","theme_color":"#663399","display":"minimal-ui","icon":"src/images/gatsby-icon.png","legacy":true,"theme_color_in_head":true,"cache_busting_mode":"query","crossOrigin":"anonymous","include_favicon":true,"cacheDigest":"c5673ecd6449091ccf1d9d4fed22b13f"},
     }]
 // During bootstrap, we write requires at top of this file which looks like:

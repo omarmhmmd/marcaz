@@ -7,27 +7,27 @@
           "options": {}
         },
         {
-          "name": "/Users/omarmhmmd/Desktop/marcaz-app/front-end/node_modules/gatsby-plugin-image/dist/babel-plugin-parse-static-images.js",
+          "name": "/Users/omarmhmmd/Desktop/Projects/Marcaz/marcaz-app/front-end/node_modules/gatsby-plugin-image/dist/babel-plugin-parse-static-images.js",
           "options": {
-            "cacheDir": "/Users/omarmhmmd/Desktop/marcaz-app/front-end/.cache/caches/gatsby-plugin-image"
+            "cacheDir": "/Users/omarmhmmd/Desktop/Projects/Marcaz/marcaz-app/front-end/.cache/caches/gatsby-plugin-image"
           }
         },
         {
-          "name": "/Users/omarmhmmd/Desktop/marcaz-app/front-end/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+          "name": "/Users/omarmhmmd/Desktop/Projects/Marcaz/marcaz-app/front-end/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
           "options": {}
         },
         {
-          "name": "/Users/omarmhmmd/Desktop/marcaz-app/front-end/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
+          "name": "/Users/omarmhmmd/Desktop/Projects/Marcaz/marcaz-app/front-end/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
           "options": {}
         },
         {
-          "name": "/Users/omarmhmmd/Desktop/marcaz-app/front-end/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
+          "name": "/Users/omarmhmmd/Desktop/Projects/Marcaz/marcaz-app/front-end/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
           "options": {}
         }
       ],
       "presets": [
         {
-          "name": "/Users/omarmhmmd/Desktop/marcaz-app/front-end/node_modules/@emotion/babel-preset-css-prop/dist/emotion-babel-preset-css-prop.cjs.js",
+          "name": "/Users/omarmhmmd/Desktop/Projects/Marcaz/marcaz-app/front-end/node_modules/@emotion/babel-preset-css-prop/dist/emotion-babel-preset-css-prop.cjs.js",
           "options": {
             "sourceMap": true,
             "autoLabel": "dev-only",
@@ -37,7 +37,7 @@
           }
         },
         {
-          "name": "/Users/omarmhmmd/Desktop/marcaz-app/front-end/node_modules/@babel/preset-typescript/lib/index.js",
+          "name": "/Users/omarmhmmd/Desktop/Projects/Marcaz/marcaz-app/front-end/node_modules/@babel/preset-typescript/lib/index.js",
           "options": {
             "plugins": [],
             "allExtensions": false,
@@ -58,27 +58,27 @@
           "options": {}
         },
         {
-          "name": "/Users/omarmhmmd/Desktop/marcaz-app/front-end/node_modules/gatsby-plugin-image/dist/babel-plugin-parse-static-images.js",
+          "name": "/Users/omarmhmmd/Desktop/Projects/Marcaz/marcaz-app/front-end/node_modules/gatsby-plugin-image/dist/babel-plugin-parse-static-images.js",
           "options": {
-            "cacheDir": "/Users/omarmhmmd/Desktop/marcaz-app/front-end/.cache/caches/gatsby-plugin-image"
+            "cacheDir": "/Users/omarmhmmd/Desktop/Projects/Marcaz/marcaz-app/front-end/.cache/caches/gatsby-plugin-image"
           }
         },
         {
-          "name": "/Users/omarmhmmd/Desktop/marcaz-app/front-end/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+          "name": "/Users/omarmhmmd/Desktop/Projects/Marcaz/marcaz-app/front-end/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
           "options": {}
         },
         {
-          "name": "/Users/omarmhmmd/Desktop/marcaz-app/front-end/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
+          "name": "/Users/omarmhmmd/Desktop/Projects/Marcaz/marcaz-app/front-end/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
           "options": {}
         },
         {
-          "name": "/Users/omarmhmmd/Desktop/marcaz-app/front-end/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
+          "name": "/Users/omarmhmmd/Desktop/Projects/Marcaz/marcaz-app/front-end/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
           "options": {}
         }
       ],
       "presets": [
         {
-          "name": "/Users/omarmhmmd/Desktop/marcaz-app/front-end/node_modules/@emotion/babel-preset-css-prop/dist/emotion-babel-preset-css-prop.cjs.js",
+          "name": "/Users/omarmhmmd/Desktop/Projects/Marcaz/marcaz-app/front-end/node_modules/@emotion/babel-preset-css-prop/dist/emotion-babel-preset-css-prop.cjs.js",
           "options": {
             "sourceMap": true,
             "autoLabel": "dev-only",
@@ -88,7 +88,7 @@
           }
         },
         {
-          "name": "/Users/omarmhmmd/Desktop/marcaz-app/front-end/node_modules/@babel/preset-typescript/lib/index.js",
+          "name": "/Users/omarmhmmd/Desktop/Projects/Marcaz/marcaz-app/front-end/node_modules/@babel/preset-typescript/lib/index.js",
           "options": {
             "plugins": [],
             "allExtensions": false,
@@ -109,27 +109,27 @@
           "options": {}
         },
         {
-          "name": "/Users/omarmhmmd/Desktop/marcaz-app/front-end/node_modules/gatsby-plugin-image/dist/babel-plugin-parse-static-images.js",
+          "name": "/Users/omarmhmmd/Desktop/Projects/Marcaz/marcaz-app/front-end/node_modules/gatsby-plugin-image/dist/babel-plugin-parse-static-images.js",
           "options": {
-            "cacheDir": "/Users/omarmhmmd/Desktop/marcaz-app/front-end/.cache/caches/gatsby-plugin-image"
+            "cacheDir": "/Users/omarmhmmd/Desktop/Projects/Marcaz/marcaz-app/front-end/.cache/caches/gatsby-plugin-image"
           }
         },
         {
-          "name": "/Users/omarmhmmd/Desktop/marcaz-app/front-end/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+          "name": "/Users/omarmhmmd/Desktop/Projects/Marcaz/marcaz-app/front-end/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
           "options": {}
         },
         {
-          "name": "/Users/omarmhmmd/Desktop/marcaz-app/front-end/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
+          "name": "/Users/omarmhmmd/Desktop/Projects/Marcaz/marcaz-app/front-end/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
           "options": {}
         },
         {
-          "name": "/Users/omarmhmmd/Desktop/marcaz-app/front-end/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
+          "name": "/Users/omarmhmmd/Desktop/Projects/Marcaz/marcaz-app/front-end/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
           "options": {}
         }
       ],
       "presets": [
         {
-          "name": "/Users/omarmhmmd/Desktop/marcaz-app/front-end/node_modules/@emotion/babel-preset-css-prop/dist/emotion-babel-preset-css-prop.cjs.js",
+          "name": "/Users/omarmhmmd/Desktop/Projects/Marcaz/marcaz-app/front-end/node_modules/@emotion/babel-preset-css-prop/dist/emotion-babel-preset-css-prop.cjs.js",
           "options": {
             "sourceMap": true,
             "autoLabel": "dev-only",
@@ -139,7 +139,7 @@
           }
         },
         {
-          "name": "/Users/omarmhmmd/Desktop/marcaz-app/front-end/node_modules/@babel/preset-typescript/lib/index.js",
+          "name": "/Users/omarmhmmd/Desktop/Projects/Marcaz/marcaz-app/front-end/node_modules/@babel/preset-typescript/lib/index.js",
           "options": {
             "plugins": [],
             "allExtensions": false,
@@ -160,27 +160,27 @@
           "options": {}
         },
         {
-          "name": "/Users/omarmhmmd/Desktop/marcaz-app/front-end/node_modules/gatsby-plugin-image/dist/babel-plugin-parse-static-images.js",
+          "name": "/Users/omarmhmmd/Desktop/Projects/Marcaz/marcaz-app/front-end/node_modules/gatsby-plugin-image/dist/babel-plugin-parse-static-images.js",
           "options": {
-            "cacheDir": "/Users/omarmhmmd/Desktop/marcaz-app/front-end/.cache/caches/gatsby-plugin-image"
+            "cacheDir": "/Users/omarmhmmd/Desktop/Projects/Marcaz/marcaz-app/front-end/.cache/caches/gatsby-plugin-image"
           }
         },
         {
-          "name": "/Users/omarmhmmd/Desktop/marcaz-app/front-end/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+          "name": "/Users/omarmhmmd/Desktop/Projects/Marcaz/marcaz-app/front-end/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
           "options": {}
         },
         {
-          "name": "/Users/omarmhmmd/Desktop/marcaz-app/front-end/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
+          "name": "/Users/omarmhmmd/Desktop/Projects/Marcaz/marcaz-app/front-end/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
           "options": {}
         },
         {
-          "name": "/Users/omarmhmmd/Desktop/marcaz-app/front-end/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
+          "name": "/Users/omarmhmmd/Desktop/Projects/Marcaz/marcaz-app/front-end/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
           "options": {}
         }
       ],
       "presets": [
         {
-          "name": "/Users/omarmhmmd/Desktop/marcaz-app/front-end/node_modules/@emotion/babel-preset-css-prop/dist/emotion-babel-preset-css-prop.cjs.js",
+          "name": "/Users/omarmhmmd/Desktop/Projects/Marcaz/marcaz-app/front-end/node_modules/@emotion/babel-preset-css-prop/dist/emotion-babel-preset-css-prop.cjs.js",
           "options": {
             "sourceMap": true,
             "autoLabel": "dev-only",
@@ -190,7 +190,7 @@
           }
         },
         {
-          "name": "/Users/omarmhmmd/Desktop/marcaz-app/front-end/node_modules/@babel/preset-typescript/lib/index.js",
+          "name": "/Users/omarmhmmd/Desktop/Projects/Marcaz/marcaz-app/front-end/node_modules/@babel/preset-typescript/lib/index.js",
           "options": {
             "plugins": [],
             "allExtensions": false,

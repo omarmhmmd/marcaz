@@ -20,6 +20,12 @@ const Title = styled.h1`
   transform: translateX(-50%);
   top: 12px;
   text-transform: uppercase;
+
+	.breadcrumb {
+		:hover {
+			text-decoration: underline;
+		}
+	}
 `
 const Header = styled.div`
   display: flex;
@@ -53,6 +59,7 @@ const Border = styled.div`
  * HTML
  */
 const Layout = props => {
+	console.log(props);
   const Desktop = ({ children }) => {
     const isDesktop = useMediaQuery({ minWidth: 768 })
     return isDesktop ? children : null
@@ -65,14 +72,14 @@ const Layout = props => {
     <Div100vh>
       <Title className="sansFont">
         <Link to="/">
-         Marcaz&nbsp;
+         <span className = "breadcrumb">Marcaz&nbsp;</span>
         </Link>
         {props.essayTitle}
       </Title>
       <Border>
         <Header>
           <Desktop>
-            <ThreeDLogo scale="0.4" />
+            <ThreeDLogo onConnect = {props.onConnect} scaleOnConnect = "0.625" scale="0.5" />
             <div>
               <Button top="50" text="?"></Button>
               <Link to={`/${props.route}`}>
@@ -81,7 +88,7 @@ const Layout = props => {
             </div>
           </Desktop>
           <Mobile>
-            <ThreeDLogo scale="0.35" />
+            <ThreeDLogo onConnect = {props.onConnect} scaleOnConnect = "0.5" scale="0.5" />
           </Mobile>
         </Header>
         {props.children}

@@ -134,7 +134,7 @@ const Description = styled.div`
     width: 100%;
     height: 250px;
     @media (max-height: 900px) {
-      height: 150px;
+      height: auto;
     }
     margin-top: 12px;
     box-sizing: border-box;

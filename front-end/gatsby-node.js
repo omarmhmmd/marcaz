@@ -1,6 +1,9 @@
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
 
+  /**
+   * Essay template
+   */
   const { data } = await graphql(`
     {
       essays: allSanityEssay {
@@ -12,7 +15,6 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `);
-
   console.log(data.essays.nodes);
   const essays = data.essays.nodes;
   essays.forEach((essay, index) => {
@@ -25,4 +27,7 @@ exports.createPages = async ({ graphql, actions }) => {
       context: { slug: essay.slug.current },
     });
   });
+  /**
+   * End essay template
+   */
 };

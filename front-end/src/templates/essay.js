@@ -1,32 +1,32 @@
-import * as React from "react"
-import { Helmet } from "react-helmet"
-import { graphql } from "gatsby"
-import styled from "@emotion/styled"
-import { useMediaQuery } from "react-responsive"
-import Layout from "../components/Layout"
-import Card from "../components/Card"
-import imageUrlBuilder from "@sanity/image-url"
-const BlockContent = require("@sanity/block-content-to-react")
+import * as React from "react";
+import { Helmet } from "react-helmet";
+import { graphql } from "gatsby";
+import styled from "@emotion/styled";
+import { useMediaQuery } from "react-responsive";
+import Layout from "../components/Layout";
+import Card from "../components/Card";
+import imageUrlBuilder from "@sanity/image-url";
+const BlockContent = require("@sanity/block-content-to-react");
 
 /**
  * GRAPHQL
  */
 export const query = graphql`
   query($slug: String!) {
-		essays: allSanityEssay(filter: { slug: { current: { eq: $slug } } }) {
+    essays: allSanityEssay(filter: { slug: { current: { eq: $slug } } }) {
       nodes {
         author {
           name
-					bio {
-						children {
-							text
-						}
-					}
-					social {
-						email
-						instagram
-						twitter
-					}
+          bio {
+            children {
+              text
+            }
+          }
+          social {
+            email
+            instagram
+            twitter
+          }
         }
         category
         mainImage {
@@ -43,57 +43,56 @@ export const query = graphql`
         publishedAt(formatString: "MMM DD, YYYY")
         description
       }
-    },
+    }
     essayBody: allSanityEssay(filter: { slug: { current: { eq: $slug } } }) {
       nodes {
         _rawBody(resolveReferences: { maxDepth: 1 })
       }
     }
   }
-`
+`;
 
 /**
  * JS
  */
 const EssayTemplate = (props) => {
-	console.log(props);
-	const data = props.data
-	const essays = data.essays.nodes[0]
-  const essayBody = data.essayBody.nodes[0]._rawBody
+  const data = props.data;
+  const essays = data.essays.nodes[0];
+  const essayBody = data.essayBody.nodes[0]._rawBody;
 
-	const hasObject = (props) => {
-		if(props !== null) {
-			return true
-		}
-	}
-	let hasInstagram = false
-	if (essays.author.social.instagram !== null) {
-		hasInstagram = true
-	}
+  const hasObject = (props) => {
+    if (props !== null) {
+      return true;
+    }
+  };
+  let hasInstagram = false;
+  if (essays.author.social.instagram !== null) {
+    hasInstagram = true;
+  }
 
-	let hasTwitter = false
-	if (essays.author.social.twitter !== null) {
-		hasTwitter = true
-	}
+  let hasTwitter = false;
+  if (essays.author.social.twitter !== null) {
+    hasTwitter = true;
+  }
 
   const Desktop = ({ children }) => {
-    const isDesktop = useMediaQuery({ minWidth: 768 })
-    return isDesktop ? children : null
-  }
+    const isDesktop = useMediaQuery({ minWidth: 768 });
+    return isDesktop ? children : null;
+  };
   const Mobile = ({ children }) => {
-    const isMobile = useMediaQuery({ maxWidth: 768 })
-    return isMobile ? children : null
-  }
+    const isMobile = useMediaQuery({ maxWidth: 768 });
+    return isMobile ? children : null;
+  };
 
-  const urlFor = source =>
+  const urlFor = (source) =>
     imageUrlBuilder({ projectId: "7wi9kuqc", dataset: "production" }).image(
       source
-    )
+    );
 
   const serializer = {
     hardBreak: "true",
     types: {
-      imgCaption: props => (
+      imgCaption: (props) => (
         <Test>
           <img src={urlFor(props.node.asset)}></img>
           <h3
@@ -104,14 +103,14 @@ const EssayTemplate = (props) => {
           </h3>
         </Test>
       ),
-      block: props => (
+      block: (props) => (
         <>
           <p>{props.node.children[0].text}</p>
           <br></br>
         </>
       ),
     },
-  }
+  };
 
   /**
    * HTML
@@ -121,7 +120,11 @@ const EssayTemplate = (props) => {
       <Helmet>
         <title>Marcaz </title>
       </Helmet>
-      <Layout routeText="BACK" route="" essayTitle={'/ ' + essays.title + ' / ' + essays.author.name}>
+      <Layout
+        routeText="BACK"
+        route=""
+        essayTitle={"/ " + essays.title + " / " + essays.author.name}
+      >
         <Column>
           <Desktop>
             <Card essay={essays} isEssay={true} />
@@ -142,14 +145,36 @@ const EssayTemplate = (props) => {
             <br></br>
             <div>
               <p>
-                <span className="sansFont">{essays.author.name.toUpperCase()}</span> {essays.author.bio[0].children[0].text}
+                <span className="sansFont">
+                  {essays.author.name.toUpperCase()}
+                </span>{" "}
+                {essays.author.bio[0].children[0].text}
               </p>
               <br></br>
               <br></br>
               <SocialLinks className="sansFont">
-								{hasObject(essays.author.social.instagram) ? <h3><a target="_blank" href={essays.author.social.instagram}>Instagram</a></h3>: null }
-								{hasObject(essays.author.social.twitter) ? <h3><a target="_blank" href={essays.author.social.twitter}>Twitter</a></h3>: null }
-                <h3><a target="_blank" href={'mailto:' + essays.author.social.email}>Email</a></h3>
+                {hasObject(essays.author.social.instagram) ? (
+                  <h3>
+                    <a target="_blank" href={essays.author.social.instagram}>
+                      Instagram
+                    </a>
+                  </h3>
+                ) : null}
+                {hasObject(essays.author.social.twitter) ? (
+                  <h3>
+                    <a target="_blank" href={essays.author.social.twitter}>
+                      Twitter
+                    </a>
+                  </h3>
+                ) : null}
+                <h3>
+                  <a
+                    target="_blank"
+                    href={"mailto:" + essays.author.social.email}
+                  >
+                    Email
+                  </a>
+                </h3>
               </SocialLinks>
               <br></br>
             </div>
@@ -157,8 +182,8 @@ const EssayTemplate = (props) => {
         </Column>
       </Layout>
     </>
-  )
-}
+  );
+};
 
 /**
  * CSS
@@ -175,7 +200,7 @@ const Column = styled.div`
   .heightCard {
     height: 100%;
   }
-`
+`;
 const Test = styled.div`
   display: flex;
   flex-direction: column;
@@ -184,6 +209,10 @@ const Test = styled.div`
   margin-bottom: 18.75px;
 
   img {
+    @media (max-width: 768px) {
+      height: auto;
+			width: 100%;
+    }
     box-sizing: border-box;
     border: 1px solid var(--color-primary);
   }
@@ -194,7 +223,7 @@ const Test = styled.div`
     font-size: 12px;
     line-height: 18px;
   }
-`
+`;
 const Essay = styled.div`
   margin-top: 37.5px;
   P {
@@ -202,7 +231,7 @@ const Essay = styled.div`
     line-height: var(--lineHeight-normal);
   }
   margin-bottom: 37.5px;
-`
+`;
 const SocialLinks = styled.div`
   display: flex;
   flex-direction: row;
@@ -213,11 +242,11 @@ const SocialLinks = styled.div`
   padding: 12px;
   text-transform: uppercase;
   font-size: 14px;
-	color: white;
+  color: white;
 
-	a:hover {
-		text-decoration: underline;
-	}
-`
+  a:hover {
+    text-decoration: underline;
+  }
+`;
 
-export default EssayTemplate
+export default EssayTemplate;

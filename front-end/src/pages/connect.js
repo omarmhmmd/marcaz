@@ -12,7 +12,7 @@ const Index = () => {
       <Helmet>
         <title>Marcaz</title>
       </Helmet>
-      <Layout routeText = "BACK" route = "">
+      <Layout onConnect = {true} routeText = "BACK" route = "">
         <MailchimpInput />
       </Layout>
     </>
