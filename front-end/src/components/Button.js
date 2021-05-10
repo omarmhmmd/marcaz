@@ -1,13 +1,13 @@
-import React, { useState } from "react"
-import styled from "@emotion/styled"
+import React, { useState } from "react";
+import styled from "@emotion/styled";
 
 // Toggle Switch
 function UseToggle(initialValue = false) {
-  const [value, setValue] = React.useState(initialValue)
+  const [value, setValue] = React.useState(initialValue);
   const toggle = React.useCallback(() => {
-    setValue(v => !v)
-  }, [])
-  return [value, toggle]
+    setValue((v) => !v);
+  }, []);
+  return [value, toggle];
 }
 
 /**
@@ -50,7 +50,7 @@ const Container = styled.div`
     background-color: var(--color-primary);
     color: white;
   }
-`
+`;
 const Text = styled.p`
   font-size: 14px;
   box-sizing: border-box;
@@ -64,30 +64,30 @@ const Text = styled.p`
   padding: 12.5px;
   outline: 1px solid var(--color-primary);
   background-color: white;
-`
+`;
 
 /**
  * HTML
  */
-const Button = props => {
-  const [isOn, toggleIsOn] = UseToggle()
+const Button = (props) => {
+  const [isOn, toggleIsOn] = UseToggle();
   if (props.open) {
     return (
       <Container style={{ paddingTop: props.top + "px" }}>
         <div className={`button sansFont background-active`}>{props.text}</div>
 
         <Text className="primaryColor sansFont">
-          Marcaz مرکز is an interdisciplinary space for sharing research,
-          critiques, histories, and new narratives around visual culture.
+          Marcaz مرکز is an online platform for new conversations about visual
+          and digital culture from in and around Afghanistan and its diaspora.
         </Text>
       </Container>
-    )
+    );
   } else if (props.disabled) {
     return (
       <Container style={{ paddingTop: props.top + "px" }}>
         <div className="noHover button sansFont">{props.text}</div>
       </Container>
-    )
+    );
   }
   return (
     <Container style={{ paddingTop: props.top + "px" }}>
@@ -99,12 +99,12 @@ const Button = props => {
       </div>
       {isOn && (
         <Text className="primaryColor sansFont">
-          Marcaz مرکز is an interdisciplinary space for sharing research,
-          critiques, histories, and new narratives around visual culture.
+          Marcaz مرکز is an online platform for new conversations about visual
+          and digital culture from in and around Afghanistan and its diaspora.
         </Text>
       )}
     </Container>
-  )
-}
+  );
+};
 
-export default Button
+export default Button;

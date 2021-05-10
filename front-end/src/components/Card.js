@@ -1,13 +1,13 @@
-import React from "react"
-import { Helmet } from "react-helmet"
-import styled from "@emotion/styled"
-import { css } from "@emotion/react"
-import Button from "../components/Button"
+import React from "react";
+import { Helmet } from "react-helmet";
+import styled from "@emotion/styled";
+import { css } from "@emotion/react";
+import Button from "../components/Button";
 
 /**
  * HTML
  */
-const Card = props => {
+const Card = (props) => {
   if (props.isEssay) {
     return (
       <EssayCard>
@@ -24,7 +24,7 @@ const Card = props => {
           <img src={props.essay.mainImage.asset.fluid.src}></img>
         </div>
       </EssayCard>
-    )
+    );
   }
   return (
     <IndexCard>
@@ -41,8 +41,8 @@ const Card = props => {
         <hr></hr>
       </Description>
     </IndexCard>
-  )
-}
+  );
+};
 
 /**
  * CSS
@@ -71,6 +71,12 @@ const IndexCard = styled.div`
     cursor: pointer;
   }
 
+  .title {
+    @media (min-height: 900px) {
+      /* font-size: 12px; */
+    }
+  }
+
   &:hover .title {
     text-decoration: underline;
   }
@@ -96,15 +102,15 @@ const IndexCard = styled.div`
     top: 3vh;
     width: 75%;
   }
-`
+`;
 const Title = styled.h1`
   text-transform: uppercase;
   text-align: center;
   font-size: var(--fontSize-5);
   @media (min-height: 900px) {
-    font-size: var(--fontSize-7);
+    /* font-size: var(--fontSize-7); */
   }
-`
+`;
 
 const Description = styled.div`
   width: calc(100% - 50px);
@@ -131,10 +137,13 @@ const Description = styled.div`
   }
 
   img {
+    object-fit: cover;
     width: 100%;
     height: 250px;
     @media (max-height: 900px) {
+			object-fit: cover;
       height: auto;
+      display: none;
     }
     margin-top: 12px;
     box-sizing: border-box;
@@ -152,7 +161,7 @@ const Description = styled.div`
       display: none;
     }
   }
-`
+`;
 
 const EssayCard = styled.div`
   display: flex;
@@ -189,12 +198,13 @@ const EssayCard = styled.div`
     align-items: center;
 
     img {
+			object-fit: cover;
       width: 250px;
       height: 250px;
       box-sizing: border-box;
       border: 1px solid var(--color-primary);
     }
   }
-`
+`;
 
-export default Card
+export default Card;
