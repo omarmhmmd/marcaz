@@ -1,10 +1,10 @@
-import * as React from "react"
-import { useMediaQuery } from "react-responsive"
-import styled from "@emotion/styled"
-import Div100vh from "react-div-100vh"
-import ThreeDLogo from "./ThreeDLogo"
-import Button from "./Button"
-import { Link } from "gatsby"
+import * as React from "react";
+import { useMediaQuery } from "react-responsive";
+import styled from "@emotion/styled";
+import Div100vh from "react-div-100vh";
+import ThreeDLogo from "./ThreeDLogo";
+import Button from "./Button";
+import { Link } from "gatsby";
 
 /**
  * CSS
@@ -21,12 +21,18 @@ const Title = styled.h1`
   top: 12px;
   text-transform: uppercase;
 
-	.breadcrumb {
-		:hover {
-			text-decoration: underline;
-		}
+  .breadcrumb {
+    :hover {
+      text-decoration: underline;
+    }
+  }
+
+	.titleCrumb {
+		@media (max-width: 768px) {
+      display: none;
+    }
 	}
-`
+`;
 const Header = styled.div`
   display: flex;
 
@@ -39,7 +45,7 @@ const Header = styled.div`
   justify-content: space-between;
   align-items: flex-start;
   width: calc(100% - 75px);
-`
+`;
 const Border = styled.div`
   width: calc(100vw - 75px);
   height: calc(100% - 75px);
@@ -53,33 +59,37 @@ const Border = styled.div`
   align-items: center;
   flex-direction: column;
   overflow-y: scroll;
-`
+`;
 
 /**
  * HTML
  */
-const Layout = props => {
-	// console.log(props);
+const Layout = (props) => {
+  // console.log(props);
   const Desktop = ({ children }) => {
-    const isDesktop = useMediaQuery({ minWidth: 768 })
-    return isDesktop ? children : null
-  }
+    const isDesktop = useMediaQuery({ minWidth: 768 });
+    return isDesktop ? children : null;
+  };
   const Mobile = ({ children }) => {
-    const isMobile = useMediaQuery({ maxWidth: 768 })
-    return isMobile ? children : null
-  }
+    const isMobile = useMediaQuery({ maxWidth: 768 });
+    return isMobile ? children : null;
+  };
   return (
     <Div100vh>
       <Title className="sansFont">
         <Link to="/">
-         <span className = "breadcrumb">Marcaz&nbsp;</span>
+          <span className="breadcrumb">Marcaz&nbsp;</span>
         </Link>
-        {props.essayTitle}
+				<span className="titleCrumb">{props.essayTitle}</span>
       </Title>
       <Border>
         <Header>
           <Desktop>
-            <ThreeDLogo onConnect = {props.onConnect} scaleOnConnect = "0.625" scale="0.5" />
+            <ThreeDLogo
+              onConnect={props.onConnect}
+              scaleOnConnect="0.625"
+              scale="0.5"
+            />
             <div>
               <Button top="50" text="?"></Button>
               <Link to={`/${props.route}`}>
@@ -88,12 +98,16 @@ const Layout = props => {
             </div>
           </Desktop>
           <Mobile>
-            <ThreeDLogo onConnect = {props.onConnect} scaleOnConnect = "0.5" scale="0.5" />
+            <ThreeDLogo
+              onConnect={props.onConnect}
+              scaleOnConnect="0.5"
+              scale="0.5"
+            />
           </Mobile>
         </Header>
         {props.children}
       </Border>
     </Div100vh>
-  )
-}
-export default Layout
+  );
+};
+export default Layout;
