@@ -150,7 +150,6 @@ const EssayTemplate = (props) => {
       >
         <Column>
           <Desktop>
-					<Button open={true} top="75" text="?"></Button>
             <EssayCard essay={essays} />
           </Desktop>
           <Mobile>
