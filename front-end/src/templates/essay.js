@@ -7,51 +7,73 @@ import Layout from "../components/Layout";
 import Card from "../components/Card";
 import EssayCard from "../components/EssayCard";
 import imageUrlBuilder from "@sanity/image-url";
+import Button from "../components/Button";
 const BlockContent = require("@sanity/block-content-to-react");
 
 /**
- * GRAPHQL
+ * CSS
  */
-export const query = graphql`
-  query($slug: String!) {
-    essays: allSanityEssay(filter: { slug: { current: { eq: $slug } } }) {
-      nodes {
-        author {
-          name
-          bio {
-            children {
-              text
-            }
-          }
-          social {
-            email
-            instagram
-            twitter
-          }
-        }
-        category
-        mainImage {
-          asset {
-            fluid {
-              src
-            }
-          }
-        }
-        slug {
-          current
-        }
-        title
-        publishedAt(formatString: "MMM DD, YYYY")
-        description
-      }
-    }
-    essayBody: allSanityEssay(filter: { slug: { current: { eq: $slug } } }) {
-      nodes {
-        _rawBody(resolveReferences: { maxDepth: 1 })
-      }
-    }
-  }
+ const Column = styled.div`
+ flex-direction: column;
+ display: flex;
+ width: 600px;
+ @media (max-width: 768px) {
+	 margin-top: 225px;
+	 width: calc(100% - 50px);
+ }
+
+ .heightCard {
+	 height: 100%;
+ }
 `;
+const Test = styled.div`
+ display: flex;
+ flex-direction: column;
+
+ margin-top: 18.75px;
+ margin-bottom: 18.75px;
+
+ img {
+	 @media (max-width: 768px) {
+		 height: auto;
+		 width: 100%;
+	 }
+	 box-sizing: border-box;
+	 border: 1px solid var(--color-primary);
+ }
+
+ h3 {
+	 margin-bottom: 0px !important;
+	 margin-top: 6px;
+	 font-size: 12px;
+	 line-height: 18px;
+ }
+`;
+const Essay = styled.div`
+ margin-top: 37.5px;
+ P {
+	 font-size: 18px;
+	 line-height: var(--lineHeight-normal);
+ }
+ margin-bottom: 37.5px;
+`;
+const SocialLinks = styled.div`
+ display: flex;
+ flex-direction: row;
+ width: 100%;
+ box-sizing: border-box;
+ border: 1px solid var(--color-primary);
+ justify-content: space-around;
+ padding: 12px;
+ text-transform: uppercase;
+ font-size: 14px;
+ color: white;
+
+ a:hover {
+	 text-decoration: underline;
+ }
+`;
+
 
 /**
  * JS
@@ -128,7 +150,8 @@ const EssayTemplate = (props) => {
       >
         <Column>
           <Desktop>
-            <Card essay={essays} />
+					<Button open={true} top="75" text="?"></Button>
+            <EssayCard essay={essays} />
           </Desktop>
           <Mobile>
             <div className="heightCard">
@@ -186,68 +209,48 @@ const EssayTemplate = (props) => {
   );
 };
 
-/**
- * CSS
- */
-const Column = styled.div`
-  flex-direction: column;
-  display: flex;
-  width: 600px;
-  @media (max-width: 768px) {
-    margin-top: 225px;
-    width: calc(100% - 50px);
-  }
-
-  .heightCard {
-    height: 100%;
-  }
-`;
-const Test = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  margin-top: 18.75px;
-  margin-bottom: 18.75px;
-
-  img {
-    @media (max-width: 768px) {
-      height: auto;
-			width: 100%;
-    }
-    box-sizing: border-box;
-    border: 1px solid var(--color-primary);
-  }
-
-  h3 {
-    margin-bottom: 0px !important;
-    margin-top: 6px;
-    font-size: 12px;
-    line-height: 18px;
-  }
-`;
-const Essay = styled.div`
-  margin-top: 37.5px;
-  P {
-    font-size: 18px;
-    line-height: var(--lineHeight-normal);
-  }
-  margin-bottom: 37.5px;
-`;
-const SocialLinks = styled.div`
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  box-sizing: border-box;
-  border: 1px solid var(--color-primary);
-  justify-content: space-around;
-  padding: 12px;
-  text-transform: uppercase;
-  font-size: 14px;
-  color: white;
-
-  a:hover {
-    text-decoration: underline;
-  }
-`;
-
 export default EssayTemplate;
+
+/**
+ * GRAPHQL
+ */
+ export const query = graphql`
+ query($slug: String!) {
+	 essays: allSanityEssay(filter: { slug: { current: { eq: $slug } } }) {
+		 nodes {
+			 author {
+				 name
+				 bio {
+					 children {
+						 text
+					 }
+				 }
+				 social {
+					 email
+					 instagram
+					 twitter
+				 }
+			 }
+			 category
+			 mainImage {
+				 asset {
+					 fluid {
+						 src
+					 }
+				 }
+			 }
+			 slug {
+				 current
+			 }
+			 title
+			 publishedAt(formatString: "MMM DD, YYYY")
+			 description
+		 }
+	 }
+	 essayBody: allSanityEssay(filter: { slug: { current: { eq: $slug } } }) {
+		 nodes {
+			 _rawBody(resolveReferences: { maxDepth: 1 })
+		 }
+	 }
+ }
+`;

@@ -9,7 +9,7 @@ import Button from "../components/Button";
  */
 const Container = styled.div`
   display: flex;
-  background-color: yellow;
+  /* background-color: yellow; */
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;

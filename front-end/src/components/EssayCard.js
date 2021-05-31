@@ -28,7 +28,7 @@ const Title = styled.h1`
 
 const Container = styled.div`
   display: flex;
-	background-color: green;
+	/* background-color: green; */
   justify-content: flex-start;
   width: 100%;
   height: 300px;
