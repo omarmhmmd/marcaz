@@ -132,7 +132,7 @@ const EssayTemplate = (props) => {
           </Desktop>
           <Mobile>
             <div className="heightCard">
-              <Card essay={essays} isEssay={false} />
+              <Card essay={essays} />
             </div>
           </Mobile>
           <Essay>

@@ -7,9 +7,9 @@ import Button from "../components/Button";
 /**
  * CSS
  */
-const IndexCard = styled.div`
+const Container = styled.div`
   display: flex;
-  /* background-color: yellow; */
+  background-color: yellow;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
@@ -145,7 +145,7 @@ const Description = styled.div`
  */
 const Card = (props) => {
   return (
-    <IndexCard>
+    <Container>
       <Button disabled={true} text={props.essay.category.toUpperCase()} />
       <Title className="sansFont title">{props.essay.title}</Title>
       <Description>
@@ -158,7 +158,7 @@ const Card = (props) => {
         <p className="blurb">{props.essay.description}</p>
         <hr></hr>
       </Description>
-    </IndexCard>
+    </Container>
   );
 };
 
