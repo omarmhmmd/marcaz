@@ -128,7 +128,7 @@ const EssayTemplate = (props) => {
       >
         <Column>
           <Desktop>
-            <EssayCard essay={essays} />
+            <Card essay={essays} />
           </Desktop>
           <Mobile>
             <div className="heightCard">
