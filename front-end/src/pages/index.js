@@ -13,6 +13,7 @@ import styled from "@emotion/styled"
  */
 const Content = styled.div`
   margin-bottom: 37.5px;
+	/* padding-top: 75px; */
   width: calc(100% - 75px);
   height: 100%;
   display: flex;
@@ -30,7 +31,8 @@ const CardList = styled.div`
   height: 100%;
   display: grid;
   align-items: center;
-	align-content: center;
+	align-content: flex-start;
+	padding-top: 37.5px;
   justify-content: center;
   grid-gap: 37.5px;
   @media (max-width: 768px) {
@@ -38,14 +40,15 @@ const CardList = styled.div`
     overflow-y: scroll;
     padding-top: 100px;
   }
-
-  grid-template-columns: repeat(3, 17.5vw);
-  grid-auto-rows: calc(100% - 75px);
+  grid-template-columns: repeat(3, 25vw);
+  grid-auto-rows: calc(100% - 37.5px);
   @media (max-width: 1440px) {
-    grid-template-columns: repeat(3, 275px);
+    grid-template-columns: repeat(3, 25vw);
   }
   @media (max-width: 1080px) {
-    grid-template-columns: repeat(2, 275px);
+    grid-template-columns: repeat(2, 32.5vw);
+		grid-auto-rows: calc(100% - 75px);
+		
   }
   @media (max-width: 768px) {
     grid-template-columns: repeat(1, calc(100% - 50px));

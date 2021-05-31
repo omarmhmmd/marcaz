@@ -5,6 +5,7 @@ import styled from "@emotion/styled";
 import { useMediaQuery } from "react-responsive";
 import Layout from "../components/Layout";
 import Card from "../components/Card";
+import EssayCard from "../components/EssayCard";
 import imageUrlBuilder from "@sanity/image-url";
 const BlockContent = require("@sanity/block-content-to-react");
 
@@ -127,7 +128,7 @@ const EssayTemplate = (props) => {
       >
         <Column>
           <Desktop>
-            <Card essay={essays} isEssay={true} />
+            <EssayCard essay={essays} />
           </Desktop>
           <Mobile>
             <div className="heightCard">
