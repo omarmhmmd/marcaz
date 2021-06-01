@@ -3,7 +3,7 @@
 :root {
 	/* Fonts */
   --fontFamily-sans: Arial;
-  --fontFamily-serif: Times;
+  --fontFamily-serif: "Times New Roman", Times, serif;
   --font-body: var(--fontFamily-serif);
   --font-heading: var(--fontFamily-sans);
 
@@ -64,6 +64,11 @@ a {
 
 .sansFont {
 	font-family: var(--fontFamily-sans);
+}
+
+.serifFont {
+	font-family: var(--fontFamily-serif);
+	font-style: italic;
 }
 
 

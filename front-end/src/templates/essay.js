@@ -247,7 +247,7 @@ const EssayTemplate = (props) => {
       >
         <Column>
           <Desktop>
-            {/* <EssayCard essay={essays} /> */}
+            <EssayCard essay={essays} />
             <Container>
               <div className="essayInfo">
                 <Button disabled={true} text={essays.category.toUpperCase()} />
@@ -264,7 +264,7 @@ const EssayTemplate = (props) => {
             </Container>
           </Desktop>
           <Mobile>
-            {/* <EssayCard essay={essays} /> */}
+            <EssayCard essay={essays} />
             <Container>
               <div className="essayInfo">
                 <Button disabled={true} text={essays.category.toUpperCase()} />
