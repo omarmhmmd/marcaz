@@ -245,9 +245,43 @@ const EssayTemplate = (props) => {
         <Column>
           <Desktop>
             <EssayCard essay={essays} />
+            <Container>
+              <div className="essayInfo">
+                <Button
+                  disabled={true}
+                  text={essays.category.toUpperCase()}
+                />
+                <Title className="sansFont">{essays.title}</Title>
+                <div className="info sansFont primaryColor">
+                  <h3 className="author">{essays.author.name}</h3>
+                  <br></br>
+                  <h3 className="date">{essays.publishedAt}</h3>
+                </div>
+              </div>
+              <div className="essayImg">
+                <img src={essays.mainImage.asset.fluid.src}></img>
+              </div>
+            </Container>
           </Desktop>
           <Mobile>
             <EssayCard essay={essays} />
+						<Container>
+              <div className="essayInfo">
+                <Button
+                  disabled={true}
+                  text={essays.category.toUpperCase()}
+                />
+                <Title className="sansFont">{essays.title}</Title>
+                <div className="info sansFont primaryColor">
+                  <h3 className="author">{essays.author.name}</h3>
+                  <br></br>
+                  <h3 className="date">{essays.publishedAt}</h3>
+                </div>
+              </div>
+              <div className="essayImg">
+                <img src={essays.mainImage.asset.fluid.src}></img>
+              </div>
+            </Container>
           </Mobile>
           <Essay>
             <BlockContent
