@@ -74,6 +74,82 @@ const SocialLinks = styled.div`
   }
 `;
 
+const Title = styled.h1`
+  text-transform: uppercase;
+  width: calc(100% - 25px);
+  text-align: center;
+
+  font-size: var(--fontSize-5);
+  @media (max-width: 1440px) {
+    font-size: var(--fontSize-4);
+  }
+  @media (max-width: 1080px) {
+    font-size: var(--fontSize-5);
+  }
+  line-height: var(--lineHeight-tight);
+
+  @media (max-height: 900px) {
+    font-size: var(--fontSize-4);
+  }
+`;
+
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  height: 300px;
+  box-sizing: border-box;
+  border: 1px solid var(--color-primary);
+
+  .essayInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    align-items: center;
+
+    width: 50%;
+    @media (max-width: 900px) {
+      width: 100%;
+    }
+    height: 100%;
+  }
+
+  .info {
+    display: flex;
+    width: 100%;
+
+    font-size: 14px;
+    justify-content: space-evenly;
+  }
+
+  .author {
+    text-transform: uppercase;
+  }
+
+  .essayImg {
+    width: 50%;
+    display: flex;
+    @media (max-width: 900px) {
+      display: none;
+    }
+    justify-content: center;
+    align-items: center;
+
+    img {
+      object-fit: cover;
+      width: 250px;
+      height: 250px;
+      box-sizing: border-box;
+      border: 1px solid var(--color-primary);
+      @media (max-width: 900px) {
+        display: none;
+      }
+    }
+  }
+`;
+
 /**
  * JS
  */
@@ -133,82 +209,6 @@ const EssayTemplate = (props) => {
     );
   };
 
-  const Title = styled.h1`
-    text-transform: uppercase;
-    width: calc(100% - 25px);
-    text-align: center;
-
-    font-size: var(--fontSize-5);
-    @media (max-width: 1440px) {
-      font-size: var(--fontSize-4);
-    }
-    @media (max-width: 1080px) {
-      font-size: var(--fontSize-5);
-    }
-    line-height: var(--lineHeight-tight);
-
-    @media (max-height: 900px) {
-      font-size: var(--fontSize-4);
-    }
-  `;
-
-  const Container = styled.div`
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    width: 100%;
-    height: 300px;
-    box-sizing: border-box;
-    border: 1px solid var(--color-primary);
-
-    .essayInfo {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      align-content: space-evenly;
-      align-items: center;
-
-      width: 50%;
-      @media (max-width: 900px) {
-        width: 100%;
-      }
-      height: 100%;
-    }
-
-    .info {
-      display: flex;
-      width: 100%;
-
-      font-size: 14px;
-      justify-content: space-evenly;
-    }
-
-    .author {
-      text-transform: uppercase;
-    }
-
-    .essayImg {
-      width: 50%;
-      display: flex;
-      @media (max-width: 900px) {
-        display: none;
-      }
-      justify-content: center;
-      align-items: center;
-
-      img {
-        object-fit: cover;
-        width: 250px;
-        height: 250px;
-        box-sizing: border-box;
-        border: 1px solid var(--color-primary);
-        @media (max-width: 900px) {
-          display: none;
-        }
-      }
-    }
-  `;
-
   const serializer = {
     hardBreak: "true",
     types: {
@@ -247,7 +247,7 @@ const EssayTemplate = (props) => {
       >
         <Column>
           <Desktop>
-            <EssayCard essay={essays} />
+            {/* <EssayCard style = "display:none" essay={essays} /> */}
             <Container>
               <div className="essayInfo">
                 <Button disabled={true} text={essays.category.toUpperCase()} />
