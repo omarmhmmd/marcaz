@@ -147,14 +147,15 @@ const EssayTemplate = (props) => {
     }
     line-height: var(--lineHeight-tight);
 
-    @media (max-height: 768px) {
-      width: calc(100%);
+    @media (max-height: 900px) {
+      font-size: var(--fontSize-4);
     }
   `;
 
   const Container = styled.div`
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+    align-content: center;
     width: 100%;
     height: 300px;
     box-sizing: border-box;
@@ -166,8 +167,9 @@ const EssayTemplate = (props) => {
       justify-content: space-evenly;
       align-content: space-evenly;
       align-items: center;
+
       width: 50%;
-      @media (max-height: 900px) {
+      @media (max-width: 900px) {
         width: 100%;
       }
       height: 100%;
@@ -176,6 +178,7 @@ const EssayTemplate = (props) => {
     .info {
       display: flex;
       width: 100%;
+
       font-size: 14px;
       justify-content: space-evenly;
     }
@@ -244,13 +247,10 @@ const EssayTemplate = (props) => {
       >
         <Column>
           <Desktop>
-            <EssayCard essay={essays} />
+            {/* <EssayCard essay={essays} /> */}
             <Container>
               <div className="essayInfo">
-                <Button
-                  disabled={true}
-                  text={essays.category.toUpperCase()}
-                />
+                <Button disabled={true} text={essays.category.toUpperCase()} />
                 <Title className="sansFont">{essays.title}</Title>
                 <div className="info sansFont primaryColor">
                   <h3 className="author">{essays.author.name}</h3>
@@ -264,13 +264,10 @@ const EssayTemplate = (props) => {
             </Container>
           </Desktop>
           <Mobile>
-            <EssayCard essay={essays} />
-						<Container>
+            {/* <EssayCard essay={essays} /> */}
+            <Container>
               <div className="essayInfo">
-                <Button
-                  disabled={true}
-                  text={essays.category.toUpperCase()}
-                />
+                <Button disabled={true} text={essays.category.toUpperCase()} />
                 <Title className="sansFont">{essays.title}</Title>
                 <div className="info sansFont primaryColor">
                   <h3 className="author">{essays.author.name}</h3>

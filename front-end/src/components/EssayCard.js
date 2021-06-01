@@ -28,7 +28,6 @@ const Title = styled.h1`
 
 const Container = styled.div`
   display: flex;
-	/* background-color: green; */
   justify-content: flex-start;
   width: 100%;
   height: 300px;
@@ -48,7 +47,7 @@ const Container = styled.div`
   .info {
     display: flex;
     width: 100%;
-		font-size: 14px;
+    font-size: 14px;
     justify-content: space-evenly;
   }
 
@@ -76,22 +75,22 @@ const Container = styled.div`
  * HTML
  */
 const EssayCard = (props) => {
-    return (
-      <Container>
-        <div className="essayInfo">
-          <Button disabled={true} text={props.essay.category.toUpperCase()} />
-          <Title className="sansFont">{props.essay.title}</Title>
-          <div className="info sansFont primaryColor">
-            <h3 className="author">{props.essay.author.name}</h3>
-            <br></br>
-            <h3 className="date">{props.essay.publishedAt}</h3>
-          </div>
+  return (
+    <Container>
+      <div className="essayInfo">
+        <Button disabled={true} text={props.essay.category.toUpperCase()} />
+        <Title className="sansFont">{props.essay.title}</Title>
+        <div className="info sansFont primaryColor">
+          <h3 className="author">{props.essay.author.name}</h3>
+          <br></br>
+          <h3 className="date">{props.essay.publishedAt}</h3>
         </div>
-        <div className="essayImg">
-          <img src={props.essay.mainImage.asset.fluid.src}></img>
-        </div>
-      </Container>
-    );
+      </div>
+      <div className="essayImg">
+        <img src={props.essay.mainImage.asset.fluid.src}></img>
+      </div>
+    </Container>
+  );
 };
 
 export default EssayCard;
