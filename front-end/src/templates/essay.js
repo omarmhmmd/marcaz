@@ -5,7 +5,7 @@ import styled from "@emotion/styled";
 import { useMediaQuery } from "react-responsive";
 import Layout from "../components/Layout";
 import Card from "../components/Card";
-// import EssayCard from "../components/EssayCard";
+import EssayCard from "../components/EssayCard";
 import imageUrlBuilder from "@sanity/image-url";
 import Button from "../components/Button";
 const BlockContent = require("@sanity/block-content-to-react");
@@ -93,63 +93,6 @@ const Title = styled.h1`
   }
 `;
 
-const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  width: 100%;
-  height: 300px;
-  box-sizing: border-box;
-  border: 1px solid var(--color-primary);
-
-  .essayInfo {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-content: space-evenly;
-    align-items: center;
-
-    width: 50%;
-    @media (max-width: 900px) {
-      width: 100%;
-    }
-    height: 100%;
-  }
-
-  .info {
-    display: flex;
-    width: 100%;
-
-    font-size: 14px;
-    justify-content: space-evenly;
-  }
-
-  .author {
-    text-transform: uppercase;
-  }
-
-  .essayImg {
-    width: 50%;
-    display: flex;
-    @media (max-width: 900px) {
-      display: none;
-    }
-    justify-content: center;
-    align-items: center;
-
-    img {
-      object-fit: cover;
-      width: 250px;
-      height: 250px;
-      box-sizing: border-box;
-      border: 1px solid var(--color-primary);
-      @media (max-width: 900px) {
-        display: none;
-      }
-    }
-  }
-`;
-
 /**
  * JS
  */
@@ -186,28 +129,6 @@ const EssayTemplate = (props) => {
     imageUrlBuilder({ projectId: "7wi9kuqc", dataset: "production" }).image(
       source
     );
-
-  /**
-   * Essay Card
-   */
-  const EssayCard = (props) => {
-    return (
-      <Container>
-        <div className="essayInfo">
-          <Button disabled={true} text={props.essay.category.toUpperCase()} />
-          <Title className="sansFont">{props.essay.title}</Title>
-          <div className="info sansFont primaryColor">
-            <h3 className="author">{props.essay.author.name}</h3>
-            <br></br>
-            <h3 className="date">{props.essay.publishedAt}</h3>
-          </div>
-        </div>
-        <div className="essayImg">
-          <img src={props.essay.mainImage.asset.fluid.src}></img>
-        </div>
-      </Container>
-    );
-  };
 
   const serializer = {
     hardBreak: "true",
@@ -247,38 +168,10 @@ const EssayTemplate = (props) => {
       >
         <Column>
           <Desktop>
-            {/* <EssayCard style = "display:none" essay={essays} /> */}
-            <Container>
-              <div className="essayInfo">
-                <Button disabled={true} text={essays.category.toUpperCase()} />
-                <Title className="sansFont">{essays.title}</Title>
-                <div className="info sansFont primaryColor">
-                  <h3 className="author">{essays.author.name}</h3>
-                  <br></br>
-                  <h3 className="date">{essays.publishedAt}</h3>
-                </div>
-              </div>
-              <div className="essayImg">
-                <img src={essays.mainImage.asset.fluid.src}></img>
-              </div>
-            </Container>
+            <EssayCard essay={essays} />
           </Desktop>
           <Mobile>
-            {/* <EssayCard essay={essays} /> */}
-            <Container>
-              <div className="essayInfo">
-                <Button disabled={true} text={essays.category.toUpperCase()} />
-                <Title className="sansFont">{essays.title}</Title>
-                <div className="info sansFont primaryColor">
-                  <h3 className="author">{essays.author.name}</h3>
-                  <br></br>
-                  <h3 className="date">{essays.publishedAt}</h3>
-                </div>
-              </div>
-              <div className="essayImg">
-                <img src={essays.mainImage.asset.fluid.src}></img>
-              </div>
-            </Container>
+            <EssayCard essay={essays} />
           </Mobile>
           <Essay>
             <BlockContent

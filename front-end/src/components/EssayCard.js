@@ -33,20 +33,25 @@ const Container = styled.div`
   height: 300px;
   box-sizing: border-box;
   border: 1px solid var(--color-primary);
+`;
 
-  .essayInfo {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-content: space-evenly;
-    align-items: center;
-    width: 50%;
-    height: 100%;
+const EssayInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  align-items: center;
+
+  width: 50%;
+  @media (max-width: 900px) {
+    width: 100%;
   }
+  height: 100%;
 
   .info {
     display: flex;
     width: 100%;
+
     font-size: 14px;
     justify-content: space-evenly;
   }
@@ -54,19 +59,25 @@ const Container = styled.div`
   .author {
     text-transform: uppercase;
   }
+`;
 
-  .essayImg {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+const EssayImg = styled.div`
+  width: 50%;
+  display: flex;
+  @media (max-width: 900px) {
+    display: none;
+  }
+  justify-content: center;
+  align-items: center;
 
-    img {
-      object-fit: cover;
-      width: 250px;
-      height: 250px;
-      box-sizing: border-box;
-      border: 1px solid var(--color-primary);
+  img {
+    object-fit: cover;
+    width: 250px;
+    height: 250px;
+    box-sizing: border-box;
+    border: 1px solid var(--color-primary);
+    @media (max-width: 900px) {
+      display: none;
     }
   }
 `;
@@ -77,7 +88,7 @@ const Container = styled.div`
 const EssayCard = (props) => {
   return (
     <Container>
-      <div className="essayInfo">
+      <EssayInfo>
         <Button disabled={true} text={props.essay.category.toUpperCase()} />
         <Title className="sansFont">{props.essay.title}</Title>
         <div className="info sansFont primaryColor">
@@ -85,10 +96,10 @@ const EssayCard = (props) => {
           <br></br>
           <h3 className="date">{props.essay.publishedAt}</h3>
         </div>
-      </div>
-      <div className="essayImg">
+      </EssayInfo>
+      <EssayImg>
         <img src={props.essay.mainImage.asset.fluid.src}></img>
-      </div>
+      </EssayImg>
     </Container>
   );
 };

@@ -108,19 +108,18 @@ const Description = styled.div`
 
   img {
     object-fit: cover;
+		object-position: top;
     width: 100%;
-    height: 500px;
+    height: 25vh;
     @media (max-height: 1440px) {
-			object-fit: cover;
-      height: auto;
-      display: none;
+			display: block !important;
 		}
+		@media (max-height: 1080px) {
+			display: none !important;
+		}
+
     @media (max-width: 768px) {
-			object-fit: cover;
-      height: auto;
-      height: 200px;
-      display: block !important;
-      /* display: none; */
+			display: none !important;
     }
     margin-top: 12px;
     box-sizing: border-box;
