@@ -116,14 +116,14 @@ const EssayTemplate = (props) => {
     hasTwitter = true;
   }
 
-  const Desktop = ({ children }) => {
-    const isDesktop = useMediaQuery({ minWidth: 768 });
-    return isDesktop ? children : null;
-  };
-  const Mobile = ({ children }) => {
-    const isMobile = useMediaQuery({ maxWidth: 768 });
-    return isMobile ? children : null;
-  };
+  // const Desktop = ({ children }) => {
+  //   const isDesktop = useMediaQuery({ minWidth: 768 });
+  //   return isDesktop ? children : null;
+  // };
+  // const Mobile = ({ children }) => {
+  //   const isMobile = useMediaQuery({ maxWidth: 768 });
+  //   return isMobile ? children : null;
+  // };
 
   const urlFor = (source) =>
     imageUrlBuilder({ projectId: "7wi9kuqc", dataset: "production" }).image(
@@ -167,12 +167,7 @@ const EssayTemplate = (props) => {
         essayTitle={"/ " + essays.title + " / " + essays.author.name}
       >
         <Column>
-          <Desktop>
-            <EssayCard essay={essays} />
-          </Desktop>
-          <Mobile>
-            <EssayCard essay={essays} />
-          </Mobile>
+          <EssayCard essay={essays} />
           <Essay>
             <BlockContent
               blocks={essayBody}
