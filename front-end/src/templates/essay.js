@@ -13,6 +13,12 @@ const BlockContent = require("@sanity/block-content-to-react");
 /**
  * CSS
  */
+
+const LineBreak = styled.hr`
+   /* border: 1px solid var(--color-primary); */
+  width: 100%;
+	color: var(--color-primary); 
+`;
 const Column = styled.div`
   width: 600px;
   @media (max-width: 768px) {
@@ -39,7 +45,7 @@ const Test = styled.div`
   h3 {
     margin-bottom: 0px !important;
     margin-top: 6px;
-		word-wrap:break-word;
+    word-wrap: break-word;
     font-size: 12px;
     line-height: 18px;
   }
@@ -168,10 +174,10 @@ const EssayTemplate = (props) => {
               blocks={essayBody}
               serializers={serializer}
             ></BlockContent>
-            <br></br>
-            <hr></hr>
-            <br></br>
-            <br></br>
+						<br></br>
+            <LineBreak></LineBreak>
+						<br></br>
+
             <div>
               <p>
                 <span className="sansFont">
