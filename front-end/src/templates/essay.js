@@ -14,16 +14,10 @@ const BlockContent = require("@sanity/block-content-to-react");
  * CSS
  */
 const Column = styled.div`
-  flex-direction: column;
-  display: flex;
   width: 600px;
   @media (max-width: 768px) {
     margin-top: 225px;
     width: calc(100% - 50px);
-  }
-
-  .heightCard {
-    height: 100%;
   }
 `;
 const Test = styled.div`
@@ -45,13 +39,16 @@ const Test = styled.div`
   h3 {
     margin-bottom: 0px !important;
     margin-top: 6px;
+		word-wrap:break-word;
     font-size: 12px;
     line-height: 18px;
   }
 `;
 const Essay = styled.div`
-  margin-top: 37.5px;
-  P {
+  display: flex;
+  flex-direction: column;
+  margin-top: 18.75px;
+  p {
     font-size: 18px;
     line-height: var(--lineHeight-normal);
   }
@@ -100,6 +97,7 @@ const EssayTemplate = (props) => {
   const data = props.data;
   const essays = data.essays.nodes[0];
   const essayBody = data.essayBody.nodes[0]._rawBody;
+  console.log(essayBody);
 
   const hasObject = (props) => {
     if (props !== null) {
@@ -132,6 +130,9 @@ const EssayTemplate = (props) => {
 
   const serializer = {
     hardBreak: "true",
+    marks: {
+      em: (props) => <em style={{ fontStyle: "italic" }}>{props.children}</em>,
+    },
     types: {
       imgCaption: (props) => (
         <Test>
@@ -143,12 +144,6 @@ const EssayTemplate = (props) => {
             {props.node.caption}
           </h3>
         </Test>
-      ),
-      block: (props) => (
-        <>
-          <p>{props.node.children[0].text}</p>
-          <br></br>
-        </>
       ),
     },
   };

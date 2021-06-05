@@ -66,6 +66,11 @@ a {
 	font-family: var(--fontFamily-sans);
 }
 
+p {
+	margin-top: 18.75px;
+  margin-bottom: 18.75px;
+}
+
 .serifFont {
 	font-family: var(--fontFamily-serif);
 	font-style: italic;

@@ -35,11 +35,6 @@ const CardList = styled.div`
 	padding-top: 37.5px;
   justify-content: center;
   grid-gap: 37.5px;
-  @media (max-width: 768px) {
-		align-content: flex-start;
-    overflow-y: scroll;
-    padding-top: 100px;
-  }
   grid-template-columns: repeat(3, 25vw);
   grid-auto-rows: calc(100% - 37.5px);
   @media (max-width: 1440px) {
@@ -50,9 +45,11 @@ const CardList = styled.div`
 		grid-auto-rows: calc(100% - 75px);
 		
   }
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
+		align-content: flex-start;
+    overflow-y: scroll;
     grid-template-columns: repeat(1, calc(100% - 50px));
-    grid-auto-rows: 62.5vh;
+    grid-auto-rows: 50vh;
   }
 `
 
@@ -91,6 +88,7 @@ export const query = graphql`
  * HTML
  */
 const Index = ({data}) => {
+	console.log(data)
 	//props.data
   const essays = data.essays.nodes
 
@@ -129,9 +127,9 @@ const Index = ({data}) => {
         <Mobile>
           <CardList>
             <div>
-              <Button open={true} top="75" text="?"></Button>
+              <Button open={true} top="200" text="?"></Button>
               <Link to="/connect">
-                <Button disabled={true} top="37.5" text="CONNECT"></Button>
+                <Button disabled={true} top="18.75" text="CONNECT"></Button>
               </Link>
             </div>
             {essays.map(essay => (

@@ -21,8 +21,8 @@ const Title = styled.h1`
   }
   line-height: var(--lineHeight-tight);
 
-  @media (min-height: 900px) {
-    /* font-size: var(--fontSize-7); */
+  @media (max-width: 900px) {
+    font-size: var(--fontSize-4);
   }
 `;
 
@@ -31,6 +31,11 @@ const Container = styled.div`
   justify-content: flex-start;
   width: 100%;
   height: 300px;
+	@media (max-width: 900px) {
+    width: 100%;
+    margin-top: 0px;
+    height: 50vh;
+  }
   box-sizing: border-box;
   border: 1px solid var(--color-primary);
 `;
@@ -42,43 +47,18 @@ const EssayInfo = styled.div`
   align-content: space-evenly;
   align-items: center;
 
-  width: 50%;
-  @media (max-width: 900px) {
-    width: 100%;
-  }
+  width: 100%;
   height: 100%;
 
   .info {
     display: flex;
     width: 100%;
-
     font-size: 14px;
     justify-content: space-evenly;
   }
 
   .author {
     text-transform: uppercase;
-  }
-`;
-
-const EssayImg = styled.div`
-  width: 50%;
-  display: flex;
-  @media (max-width: 900px) {
-    display: none;
-  }
-  justify-content: center;
-  align-items: center;
-
-  img {
-    object-fit: cover;
-    width: 250px;
-    height: 250px;
-    box-sizing: border-box;
-    border: 1px solid var(--color-primary);
-    @media (max-width: 900px) {
-      display: none;
-    }
   }
 `;
 
@@ -97,9 +77,6 @@ const EssayCard = (props) => {
           <h3 className="date">{props.essay.publishedAt}</h3>
         </div>
       </EssayInfo>
-      <EssayImg>
-        <img src={props.essay.mainImage.asset.fluid.src}></img>
-      </EssayImg>
     </Container>
   );
 };

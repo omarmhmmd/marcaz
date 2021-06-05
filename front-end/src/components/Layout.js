@@ -11,6 +11,9 @@ import { Link } from "gatsby";
  */
 
 const Title = styled.h1`
+	@media (max-width: 900px) {
+      display: none;
+    }
   position: fixed;
   left: 50%;
   display: flex;
@@ -19,6 +22,36 @@ const Title = styled.h1`
   font-size: 14px;
   transform: translateX(-50%);
   top: 12px;
+  text-transform: uppercase;
+
+  .breadcrumb {
+			/* @media (max-width: 768px) {
+      display: none;
+    } */
+    :hover {
+      text-decoration: underline;
+    }
+  }
+
+	.titleCrumb {
+		/* @media (max-width: 768px) {
+      display: none;
+    } */
+	}
+`;
+
+const BottomTitle = styled.h1`
+@media (min-width: 900px) {
+      display: none;
+    }
+  position: fixed;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 14px;
+  transform: translateX(-50%);
+  top: calc(100% - 26.25px);
   text-transform: uppercase;
 
   .breadcrumb {
@@ -107,6 +140,12 @@ const Layout = (props) => {
         </Header>
         {props.children}
       </Border>
+			<BottomTitle className="sansFont">
+        <Link to="/">
+          <span className="breadcrumb">Marcaz&nbsp;</span>
+        </Link>
+				<span className="titleCrumb">{props.essayTitle}</span>
+      </BottomTitle>
     </Div100vh>
   );
 };
