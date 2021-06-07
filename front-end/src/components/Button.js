@@ -51,7 +51,7 @@ const Container = styled.div`
     color: white;
   }
 `;
-const Text = styled.p`
+const Text = styled.div`
   font-size: 14px;
   box-sizing: border-box;
   margin-top: 1px;

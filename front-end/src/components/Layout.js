@@ -124,7 +124,7 @@ const Layout = (props) => {
               scale="0.5"
             />
             <div>
-              <Button top="50" text="?"></Button>
+              <Button top="25" text="?"></Button>
               <Link to={`/${props.route}`}>
                 <Button top="25" text={`${props.routeText}`}></Button>
               </Link>
