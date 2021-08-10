@@ -57,5 +57,8 @@ export default {
 			name: 'imgCaption',
 			title: 'Image w/ Caption'
     },
+		{
+      type: 'youtube'
+    }
   ],
 };

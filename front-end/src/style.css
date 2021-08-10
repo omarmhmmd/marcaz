@@ -76,5 +76,15 @@ p {
 	font-style: italic;
 }
 
+@media (max-width: 768px) {
+	iframe {
+		left: 0;
+		top: 0;
+		height: 360px;
+		width: 100%;
+	}
+}
+
+
 
 

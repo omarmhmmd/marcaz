@@ -8,6 +8,8 @@ import Card from "../components/Card";
 import EssayCard from "../components/EssayCard";
 import imageUrlBuilder from "@sanity/image-url";
 import Button from "../components/Button";
+import getYouTubeId from 'get-youtube-id'
+import YouTube from 'react-youtube'
 const BlockContent = require("@sanity/block-content-to-react");
 
 /**
@@ -140,6 +142,14 @@ const EssayTemplate = (props) => {
       em: (props) => <em style={{ fontStyle: "italic" }}>{props.children}</em>,
     },
     types: {
+			youtube: ({node}) => {
+        const { url } = node
+        const id = getYouTubeId(url)
+				const opts = {
+					width: '600',
+				};
+        return (<YouTube videoId={id} opts={opts} />)
+      },
       imgCaption: (props) => (
         <Test>
           <img src={urlFor(props.node.asset)}></img>

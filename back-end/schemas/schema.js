@@ -10,6 +10,8 @@ import essay from './documents/essay'
 import author from './documents/author'
 import social from './objects/social'
 import imgCaption from './inline/imgCaption.js'
+import youtube from './inline/youtube.js'
+
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -25,6 +27,7 @@ export default createSchema({
     blockContent,
 		social,
 		// Inline
-		imgCaption
+		imgCaption,
+		youtube
   ]),
 })
